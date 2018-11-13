@@ -4,7 +4,28 @@
     microsoftTeams.getContext(function (context) {
         $('#name').text(`Welcome, ${context.upn}`);
     });
+
+    let preferredSearchEngine = getSetting('preferredSearchRadio');
+    if (preferredSearchEngine) {
+        $('#preferredSearchEngine').text(`Your preferred search engine is ${preferredSearchEngine}`);
+    }
+    
+    microsoftTeams.settings.getSettings(function (theSettings) {
+        console.log('Coming back');
+    });
 });
+
+function getSetting(settingName) {
+    let queryParams = window.location.search.split('&');
+    if (queryParams && queryParams.length > 0) {
+        for (var i = 0; i < queryParams.length; i++) {
+            if (queryParams[i].split('=')[0] == settingName) {
+                return queryParams[i].split('=')[1];
+            }
+        }
+    }
+    return null;
+}
 
 function searchClick() {
     var input = $('#searchTerms').val();
