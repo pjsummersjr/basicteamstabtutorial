@@ -9,7 +9,17 @@
     if (preferredSearchEngine) {
         $('#preferredSearchEngine').text(`Your preferred search engine is ${preferredSearchEngine}`);
     }
-    
+    microsoftTeams.getTabInstances(function (tabInstances) {
+
+        if (tabInstances && tabInstances.teamTabs.length > 0) {
+            let tab = tabInstances.teamTabs[0];
+            let htmlData = `<div class="alert alert-secondary"><b>Tab Information</b><br/>`;
+            htmlData += `<div>Tab name: ${tab.tabName}</div>`;
+            htmlData += `<div>Team name: ${tab.teamName}</div>`;
+            htmlData += `</div>`;
+            $('#tabInfo').html(htmlData);
+        }
+    }, null);
     microsoftTeams.settings.getSettings(function (theSettings) {
         console.log('Coming back');
     });
