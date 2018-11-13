@@ -11,7 +11,6 @@
         htmlData += `<div>Preferred Search Engine: ${preferredSearchEngine}</div>`;
         htmlData += `</div>`;
         $('#infoPane').append(htmlData);
-        //$('#preferredSearchEngine').text(`Your preferred search engine is ${preferredSearchEngine}`);
     }
     microsoftTeams.getTabInstances(function (tabInstances) {
 
@@ -30,6 +29,7 @@
 });
 
 function getSetting(settingName) {
+    console.log(window.location.search);
     let queryParams = window.location.search.split('&');
     if (queryParams && queryParams.length > 0) {
         for (var i = 0; i < queryParams.length; i++) {
