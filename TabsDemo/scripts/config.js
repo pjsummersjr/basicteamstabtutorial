@@ -36,6 +36,6 @@
 });
 
 function GoogleSelected() {
-    alert('Invalid selection!');
+    alert('This search engine is inferior and is not allowed');
     $('#bingRadio').prop('checked',true);
 }
