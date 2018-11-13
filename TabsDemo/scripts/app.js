@@ -4,6 +4,16 @@
     microsoftTeams.getContext(function (context) {
         $('#name').text(`Welcome, ${context.upn}`);
     });
+    microsoftTeams.getTabInstances(function (tabInstances) {
+
+        if (tabInstances && tabInstances.teamTabs.length > 0) {
+            let tab = tabInstances.teamTabs[0];
+            let htmlData = `<div class="alert alert-secondary"><b>Tab Information</b><br/>`;
+            htmlData += `<div>Tab name: ${tab.tabName}</div>`;
+            htmlData += `</div>`;
+            $('#tabInfo').html(htmlData);
+        }
+    }, null);
 });
 
 function searchClick() {
