@@ -8,8 +8,12 @@
 
 function searchClick() {
     var input = $('#searchTerms').val();
+    let bingNewsUrl = `https://api.cognitive.microsoft.com/bing/v7.0/news/search`;
+    if (input && input.length > 0) {
+        bingNewsUrl += `?q=${input}`;
+    }
     var request = $.get({
-            url: `https://api.cognitive.microsoft.com/bing/v7.0/news/search`,
+            url: bingNewsUrl,
             crossDomain: true,
             headers: {
                 "Ocp-Apim-Subscription-Key":"7b8b0e1bc1e74db48f3389ba2ce84ff3"
