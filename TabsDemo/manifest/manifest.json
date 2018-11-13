@@ -27,8 +27,8 @@
   "composeExtensions": [],
   "staticTabs": [
     {
-      "entityId": "candidatesTab",
-      "name": "Candidates",
+      "entityId": "bootcampDemoTab",
+      "name": "Bootcamp Demo",
       "contentUrl": "https://pjsummersjr.ngrok.io/index.html",
       "websiteUrl": "https://pjsummersjr.ngrok.io/index.html?web=1",
       "scopes": [ "personal" ]
