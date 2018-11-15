@@ -26,7 +26,7 @@ function searchClick() {
             url: bingNewsUrl,
             crossDomain: true,
             headers: {
-                "Ocp-Apim-Subscription-Key":"7b8b0e1bc1e74db48f3389ba2ce84ff3"
+                "Ocp-Apim-Subscription-Key":"6d8ca4536c9e4740a9c1ca3208f2c209"
             }
         })
         .done(function (data) {
