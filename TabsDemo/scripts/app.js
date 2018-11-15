@@ -11,7 +11,7 @@
             let htmlData = `<div class="alert alert-secondary"><b>Tab Information</b><br/>`;
             htmlData += `<div>Tab name: ${tab.tabName}</div>`;
             htmlData += `</div>`;
-            $('#tabInfo').html(htmlData);
+            $('#infoPane').append(htmlData);
         }
     }, null);
 });
