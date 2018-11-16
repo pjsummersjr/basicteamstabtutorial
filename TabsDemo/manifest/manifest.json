@@ -3,12 +3,12 @@
   "manifestVersion": "1.3",
   "version": "1.0.0",
   "id": "9fdc103a-7504-4f48-bb72-fc1bc5d2c992",
-  "packageName": "io.ngrok.pjsummersjr",
+  "packageName": "io.ngrok.[replaceme]",
   "developer": {
     "name": "Paul Summers",
-    "websiteUrl": "https://pjsummersjr.ngrok.io",
-    "privacyUrl": "https://pjsummersjr.ngrok.io/privacy",
-    "termsOfUseUrl": "https://pjsummersjr.ngrok.io/termsofuse"
+    "websiteUrl": "https://[replaceme].ngrok.io",
+    "privacyUrl": "https://[replaceme].ngrok.io/privacy",
+    "termsOfUseUrl": "https://[replaceme].ngrok.io/termsofuse"
   },
   "icons": {
     "color": "bot-icon-color-192x192.png",
@@ -29,14 +29,14 @@
     {
       "entityId": "bootcampDemoTab",
       "name": "Bootcamp Demo",
-      "contentUrl": "https://pjsummersjr.ngrok.io/index.html",
-      "websiteUrl": "https://pjsummersjr.ngrok.io/index.html?web=1",
+      "contentUrl": "https://[replaceme].ngrok.io/index.html",
+      "websiteUrl": "https://[replaceme].ngrok.io/index.html?web=1",
       "scopes": [ "personal" ]
     }
   ],
   "configurableTabs": [
     {
-      "configurationUrl": "https://pjsummersjr.ngrok.io/config.html",
+      "configurationUrl": "https://[replaceme].ngrok.io/config.html",
       "canUpdateConfiguration": true,
       "scopes": [ "groupchat", "team" ]
     }
@@ -45,5 +45,5 @@
     "identity",
     "messageTeamMembers"
   ],
-  "validDomains": [ "pjsummersjr.ngrok.io" ]
+  "validDomains": [ "[replaceme].ngrok.io" ]
 }
