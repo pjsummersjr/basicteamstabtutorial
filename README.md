@@ -57,3 +57,12 @@ From here, follow the instructions as above from 5 onward. You won't get a confi
 You have deployed a custom Tab to teams. You can now build on top of this very simple code base. If you've done any type of web development, you should feel comfortable to start enhancing this. There is tons of additional content around customizing Teams at dev.office.com.
 
 I actually based this code off the code found here https://github.com/OfficeDev/TrainingContent/tree/master/Teams. This tutorial is considerably more comprehensive but also leans on some more complex code. My stuff here is almost as simple as it can be. 
+
+## Deployment Configuration Explanation
+If you're curious about the deployment process, read on...
+
+Tabs in Microsoft Teams are nothing more than an iFrame to another website. As long as that website is accessible from the Teams app (it must be a publicly accessible endpoint), then Teams can host it in a Tab. The configuration comes down to the manifest.js file. That file provides the Teams application, whether it's on the desktop or the web, with a pointer to the application hosting your Tab. You can find the complete documentation on that manifest.json here: https://docs.microsoft.com/en-us/microsoftteams/platform/resources/schema/manifest-schema
+
+For deployment, all you need to do is add the manifest.json and the two icon (image) files to a zip file and that's what you upload to Teams.
+
+I think it's important for developers to realize how easy this is and how simple the architecture is. It will hopefully accelerate your deployment of Teams.
